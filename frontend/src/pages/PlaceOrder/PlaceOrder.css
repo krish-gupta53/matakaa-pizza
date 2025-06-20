@@ -1,0 +1,104 @@
+.place-order {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+.place-order-left {
+    width: 100%;
+    max-width: 500px;
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px #00000015;
+}
+
+.place-order-left .title {
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.multi-field {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.multi-field input {
+    flex: 1;
+}
+
+.place-order-left input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #c5c5c5;
+    border-radius: 4px;
+    margin-bottom: 20px;
+    outline: none;
+}
+
+.place-order-left input:focus {
+    border-color: #FF4C24;
+}
+
+.place-order-left button {
+    width: 100%;
+    padding: 12px;
+    background: #FF4C24;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.place-order-left button:hover {
+    background: #e63e1a;
+}
+
+@media (max-width: 768px) {
+    .place-order {
+        padding: 15px;
+    }
+
+    .place-order-left {
+        padding: 20px;
+    }
+
+    .place-order-left .title {
+        font-size: 20px;
+        margin-bottom: 15px;
+    }
+
+    .multi-field {
+        gap: 15px;
+        margin-bottom: 15px;
+    }
+
+    .place-order-left input {
+        padding: 10px;
+        margin-bottom: 15px;
+    }
+
+    .place-order-left button {
+        padding: 10px;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .place-order {
+        padding: 10px;
+    }
+
+    .place-order-left {
+        padding: 15px;
+    }
+
+    .multi-field {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
