@@ -75,7 +75,7 @@ const Login = () => {
         <div className="auth-container">
             <div className="auth-content">
                 <div className="auth-header">
-                    <h1>Welcome to Tomato</h1>
+                    <h1>Welcome to Matakaa-pizza</h1>
                     <p>Your favorite food delivery platform</p>
                 </div>
                 
