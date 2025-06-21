@@ -112,7 +112,65 @@ position: relative;
     height: 1px;
     border: none;
 }
-@media (max-width:1050px) {
+
+/* Mobile menu toggle */
+.navbar-mobile-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    padding: 5px;
+}
+
+.navbar-mobile-toggle span {
+    width: 25px;
+    height: 3px;
+    background-color: #49557E;
+    margin: 3px 0;
+    transition: 0.3s;
+}
+
+.navbar-mobile-menu {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: white;
+    z-index: 1000;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+}
+
+.navbar-mobile-menu.active {
+    display: flex;
+}
+
+.navbar-mobile-menu li {
+    list-style: none;
+    font-size: 24px;
+    color: #49557E;
+    cursor: pointer;
+    padding: 15px 0;
+}
+
+.navbar-mobile-menu .active {
+    color: #FF4C24;
+    border-bottom: 2px solid #FF4C24;
+}
+
+.navbar-mobile-close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 30px;
+    cursor: pointer;
+    color: #49557E;
+}
+
+@media (max-width: 1050px) {
     .navbar .logo {
         width: 140px;
     }
@@ -135,7 +193,7 @@ position: relative;
     }
 }
 
-@media (max-width:900px) {
+@media (max-width: 900px) {
     .navbar .logo {
         width: 120px;
     }
@@ -159,8 +217,67 @@ position: relative;
     }
 }
 
-@media (max-width:750px) {
+@media (max-width: 750px) {
     .navbar-menu {
         display: none;
+    }
+    
+    .navbar-mobile-toggle {
+        display: flex;
+    }
+    
+    .navbar-right {
+        gap: 15px;
+    }
+    
+    .navbar-right button {
+        padding: 6px 15px;
+        font-size: 14px;
+    }
+    
+    .navbar .logo {
+        width: 100px;
+    }
+    
+    .navbar-logo .logo-img {
+        width: 50px;
+        height: 50px;
+    }
+    
+    .navbar h6 {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .navbar {
+        padding: 15px 0px;
+    }
+    
+    .navbar .logo {
+        width: 80px;
+    }
+    
+    .navbar-logo .logo-img {
+        width: 40px;
+        height: 40px;
+    }
+    
+    .navbar h6 {
+        font-size: 18px;
+    }
+    
+    .navbar-right {
+        gap: 10px;
+    }
+    
+    .navbar-right button {
+        padding: 5px 12px;
+        font-size: 12px;
+    }
+    
+    .navbar-mobile-toggle span {
+        width: 20px;
+        height: 2px;
     }
 }
