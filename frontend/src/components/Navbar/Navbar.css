@@ -170,7 +170,7 @@ position: relative;
     color: #49557E;
 }
 
-@media (max-width: 1050px) {
+@media (max-width:1050px) {
     .navbar .logo {
         width: 140px;
     }
@@ -193,7 +193,7 @@ position: relative;
     }
 }
 
-@media (max-width: 900px) {
+@media (max-width:900px) {
     .navbar .logo {
         width: 120px;
     }
@@ -217,35 +217,9 @@ position: relative;
     }
 }
 
-@media (max-width: 750px) {
+@media (max-width:750px) {
     .navbar-menu {
         display: none;
-    }
-    
-    .navbar-mobile-toggle {
-        display: flex;
-    }
-    
-    .navbar-right {
-        gap: 15px;
-    }
-    
-    .navbar-right button {
-        padding: 6px 15px;
-        font-size: 14px;
-    }
-    
-    .navbar .logo {
-        width: 100px;
-    }
-    
-    .navbar-logo .logo-img {
-        width: 50px;
-        height: 50px;
-    }
-    
-    .navbar h6 {
-        font-size: 20px;
     }
 }
 

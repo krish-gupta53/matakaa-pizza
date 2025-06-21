@@ -10,8 +10,6 @@
 
 body {
   min-height: 100vh;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
 }
 
 a {
@@ -39,14 +37,7 @@ button {
   }
 }
 
-/* Responsive breakpoints */
-@media (max-width: 1200px) {
-  .app {
-    width: 85%;
-  }
-}
-
-@media (max-width: 1050px) {
+@media (max-width:1050px) {
   .app {
     width: 90%;
   }

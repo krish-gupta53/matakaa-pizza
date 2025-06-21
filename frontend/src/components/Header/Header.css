@@ -36,22 +36,8 @@
     background: white;
     font-size: max(1vw,13px);
     border-radius: 50px;
-    cursor: pointer;
-    transition: all 0.3s ease;
 }
-.header-contents button:hover{
-    background: #f0f0f0;
-    transform: translateY(-2px);
-}
-@media (max-width: 1200px) {
-    .header{
-        height: 36vw;
-    }
-    .header-contents{
-        max-width: 48%;
-    }
-}
-@media (max-width: 1050px) {
+@media (max-width:1050px) {
     .header{
         height: 38vw;
     }
@@ -59,78 +45,14 @@
         max-width: 45%;
     }
 }
-@media (max-width: 900px) {
-    .header{
-        height: 40vw;
-        margin: 20px auto;
-    }
-    .header-contents{
-        max-width: 50%;
-        left: 4vw;
-        bottom: 8%;
-    }
-    .header-contents h2{
-        font-size: max(4vw, 20px);
-    }
-}
-@media (max-width: 750px){
-    .header{
-        height: 45vw;
-        margin: 15px auto;
-        border-radius: 15px;
-    }
+@media(max-width:750px){
     .header-contents{
         max-width: 55%;
-        left: 3vw;
-        bottom: 6%;
-        gap: 1vw;
-    }
-    .header-contents h2{
-        font-size: max(3.5vw, 18px);
     }
     .header-contents p{
        display: none;
     }
     .header-contents button{
         padding: 2vw 4vw;
-        font-size: max(0.9vw, 12px);
-    }
-}
-@media (max-width: 600px) {
-    .header{
-        height: 50vw;
-        margin: 10px auto;
-        border-radius: 12px;
-    }
-    .header-contents{
-        max-width: 60%;
-        left: 2vw;
-        bottom: 5%;
-    }
-    .header-contents h2{
-        font-size: max(3vw, 16px);
-    }
-    .header-contents button{
-        padding: 2.5vw 5vw;
-        font-size: max(0.8vw, 11px);
-    }
-}
-@media (max-width: 480px) {
-    .header{
-        height: 55vw;
-        margin: 8px auto;
-        border-radius: 10px;
-    }
-    .header-contents{
-        max-width: 65%;
-        left: 1.5vw;
-        bottom: 4%;
-    }
-    .header-contents h2{
-        font-size: max(2.8vw, 14px);
-    }
-    .header-contents button{
-        padding: 3vw 6vw;
-        font-size: max(0.7vw, 10px);
     }
 }

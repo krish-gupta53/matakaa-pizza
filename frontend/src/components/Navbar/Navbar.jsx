@@ -6,7 +6,6 @@ import { StoreContext } from '../../Context/StoreContext'
 
 const Navbar = () => {
   const [menu, setMenu] = useState("home");
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const { getTotalCartAmount, token, setToken } = useContext(StoreContext);
   const navigate = useNavigate();
 
@@ -16,16 +15,6 @@ const Navbar = () => {
     localStorage.removeItem("userName");
     setToken("");
     navigate('/');
-    setMobileMenuOpen(false);
-  }
-
-  const handleMenuClick = (menuItem) => {
-    setMenu(menuItem);
-    setMobileMenuOpen(false);
-  }
-
-  const toggleMobileMenu = () => {
-    setMobileMenuOpen(!mobileMenuOpen);
   }
 
   return (
@@ -34,41 +23,11 @@ const Navbar = () => {
         <img src={assets.logo} alt="logo" className="logo-img" />
         <h6>Matakaa Pizza</h6>
       </Link>
-      
-      {/* Desktop Menu */}
       <ul className="navbar-menu">
         <Link to="/home" onClick={() => setMenu("home")} className={`${menu === "home" ? "active" : ""}`}>home</Link>
         <a href='#food-display' onClick={() => setMenu("menu")} className={`${menu === "menu" ? "active" : ""}`}>menu</a>
         <a href='#footer' onClick={() => setMenu("contact")} className={`${menu === "contact" ? "active" : ""}`}>contact us</a>
       </ul>
-      
-      {/* Mobile Menu Toggle */}
-      <div className="navbar-mobile-toggle" onClick={toggleMobileMenu}>
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
-      
-      {/* Mobile Menu */}
-      <ul className={`navbar-mobile-menu ${mobileMenuOpen ? 'active' : ''}`}>
-        <div className="navbar-mobile-close" onClick={toggleMobileMenu}>×</div>
-        <li onClick={() => handleMenuClick("home")} className={`${menu === "home" ? "active" : ""}`}>
-          <Link to="/home">Home</Link>
-        </li>
-        <li onClick={() => handleMenuClick("menu")} className={`${menu === "menu" ? "active" : ""}`}>
-          <a href='#food-display'>Menu</a>
-        </li>
-        <li onClick={() => handleMenuClick("contact")} className={`${menu === "contact" ? "active" : ""}`}>
-          <a href='#footer'>Contact Us</a>
-        </li>
-        <li onClick={() => navigate('/myorders')}>
-          <Link to='/myorders'>My Orders</Link>
-        </li>
-        <li onClick={logout}>
-          Logout
-        </li>
-      </ul>
-      
       <div className="navbar-right">
         <img src={assets.search_icon} alt="" />
         <Link to='/cart' className='navbar-search-icon'>

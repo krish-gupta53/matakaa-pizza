@@ -12,37 +12,3 @@
     gap: 30px;
     row-gap: 50px;
 }
-
-@media (max-width: 768px) {
-    .food-display {
-        margin-top: 20px;
-    }
-
-    .food-display h2 {
-        font-size: 20px;
-        margin-bottom: 20px;
-    }
-
-    .food-display-list {
-        grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
-        gap: 20px;
-        row-gap: 30px;
-    }
-}
-
-@media (max-width: 480px) {
-    .food-display {
-        margin-top: 15px;
-    }
-
-    .food-display h2 {
-        font-size: 18px;
-        margin-bottom: 15px;
-    }
-
-    .food-display-list {
-        grid-template-columns: 1fr;
-        gap: 15px;
-        row-gap: 25px;
-    }
-}
