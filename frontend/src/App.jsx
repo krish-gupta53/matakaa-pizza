@@ -14,7 +14,7 @@ import Verify from './pages/Verify/Verify'
 import axios from 'axios';
 
 // Configure axios defaults
-axios.defaults.baseURL = 'http://localhost:4000';
+axios.defaults.baseURL = `${import.meta.env.VITE_API_URL}`;
 axios.defaults.headers.common['Content-Type'] = 'application/json';
 
 // Set up token in axios headers if it exists
